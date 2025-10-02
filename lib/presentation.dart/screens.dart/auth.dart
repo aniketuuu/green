@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dashboard.dart';
+import 'signup.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -105,10 +106,13 @@ class _AuthPageState extends State<AuthPage> {
             ),
             const SizedBox(height: 20),
 
-            // Sign Up Button (just navigation for later)
+            // Sign Up Button → Navigate to SignUpPage
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/signup');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpPage()),
+                );
               },
               child: const Text(
                 "Don't have an account? Sign Up",
