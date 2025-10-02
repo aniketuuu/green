@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'auth.dart';
 
 class ChooseRoleScreen extends StatelessWidget {
   const ChooseRoleScreen({super.key});
@@ -28,25 +29,48 @@ class ChooseRoleScreen extends StatelessWidget {
               RoleBox(
                 iconPath: 'assets/images/builder.png',
                 label: 'Builder / Contractor',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AuthPage()),
+                  );
+                },
               ),
               const SizedBox(height: 25),
+
               RoleBox(
                 iconPath: 'assets/images/engineer.png',
                 label: 'Architect / Engineer',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AuthPage()),
+                  );
+                },
               ),
               const SizedBox(height: 25),
+
               RoleBox(
                 iconPath: 'assets/images/student.png',
                 label: 'Student / Researcher',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AuthPage()),
+                  );
+                },
               ),
               const SizedBox(height: 25),
+
               RoleBox(
                 iconPath: 'assets/images/policy.png',
                 label: 'Policy / Corporate',
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AuthPage()),
+                  );
+                },
               ),
             ],
           ),
